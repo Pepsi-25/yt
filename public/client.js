@@ -35,3 +35,17 @@ requestAnimationFrame(draw);
 
 draw();
 
+const roomId = prompt('Enter room name:');
+socket.emit('join-room', roomId);
+
+
+/* =========================
+STAGE 4 – USERNAME + AVATAR (Basic)
+========================= */
+
+
+const username = prompt('Your name:');
+
+
+// send username with movement
+socket.emit('user-info', { name: username });
